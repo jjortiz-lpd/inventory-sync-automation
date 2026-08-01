@@ -1,86 +1,74 @@
 # Inventory Sync Automation
 
-A Python automation project that processes sales orders, updates an Excel inventory, detects low-stock and out-of-stock products, and generates a PDF summary report.
+## Overview
 
-## Business problem
+A Python automation project that synchronizes inventory using Excel workbooks.
 
-Small businesses often maintain inventory and sales in separate spreadsheets. Updating stock manually is repetitive and prone to errors.
+The application reads inventory and order data, updates stock automatically, generates an updated Excel report, creates a PDF summary, and logs the execution.
 
-This project automates the complete workflow:
+---
 
-1. Reads the current inventory from `Inventory.xlsx`.
-2. Reads completed sales from `Orders.xlsx`.
-3. Groups sales by product.
-4. Updates stock automatically.
-5. Prevents negative inventory values.
-6. Classifies each product as:
-   - Available
-   - Low Stock
-   - Out of Stock
-7. Generates `UpdatedInventory.xlsx`.
-8. Generates `InventoryReport.pdf`.
-9. Records execution details in `inventory_sync.log`.
+## Features
 
-## Technologies
+- Read inventory from Excel
+- Process customer orders
+- Update stock quantities
+- Detect low inventory
+- Generate updated Excel workbook
+- Generate PDF report
+- Logging
+- Error handling
+
+---
+
+## Tech Stack
 
 - Python
-- pandas
-- openpyxl
+- Pandas
+- OpenPyXL
 - ReportLab
-- Excel / XLSX
-- Data validation and processing
 
-## Installation
+---
 
-```bash
-python -m venv .venv
+## Project Structure
+
+```
+Inventory.xlsx
+Orders.xlsx
+main.py
+requirements.txt
+README.md
+UpdatedInventory.xlsx
+InventoryReport.pdf
 ```
 
-### Windows
+---
 
-```bash
-.venv\Scripts\activate
-```
+## Example Workflow
 
-### macOS/Linux
+Inventory.xlsx
+↓
 
-```bash
-source .venv/bin/activate
-```
+Orders.xlsx
 
-Install dependencies:
+↓
 
-```bash
-pip install -r requirements.txt
-```
+Python Automation
 
-## Run the project
+↓
 
-```bash
-python main.py
-```
+UpdatedInventory.xlsx
 
-## Expected output
+↓
 
-After running the program, the following files are created:
+InventoryReport.pdf
 
-- `UpdatedInventory.xlsx`
-- `InventoryReport.pdf`
-- `inventory_sync.log`
+---
 
-## Portfolio description
+## Future Improvements
 
-**Inventory Sync Automation**
-
-Python automation that processes Excel sales records, updates product inventory, detects low-stock items, and generates formatted Excel and PDF reports. The solution includes input validation, error handling, logging, and reusable code.
-
-## Suggested Upwork skills
-
-- Python
-- Automation
-- Data Processing
-- Microsoft Excel
-- pandas
-- openpyxl
-- Report Generation
-- Scripting
+- SQL Database Integration
+- REST API
+- Email Notifications
+- Dashboard
+- Google Sheets Sync
