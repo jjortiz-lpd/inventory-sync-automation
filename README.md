@@ -1,5 +1,5 @@
 # Inventory Sync Automation
-
+![Banner](banner.png)
 ## Overview
 
 A Python automation project that synchronizes inventory using Excel workbooks.
